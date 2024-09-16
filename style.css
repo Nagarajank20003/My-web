@@ -1,0 +1,862 @@
+:root {
+    --blue: rgb(0, 238, 255);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+   
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5px;
+    color: white;
+    background: rgb(67, 31, 6) ;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--blue);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.514);
+    /* background-color: transparent; */   
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2px;
+
+}
+
+#logo {
+    width: 80px;
+    height: auto;
+    border-radius: 50px;
+    margin: 20px 30px 20px 40px;
+    opacity: 20;
+     
+}
+
+#brand {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    align-items: center;
+    margin: 10px;
+}
+
+header .navbar {
+    margin: 10px 50px 10px 120px;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #fff;
+   
+}
+
+header .navbar a:hover {
+    color: var(--blue);
+}
+
+header #icons a {
+    font-size: 2.5rem;
+    color: #fff;
+    margin:0px 2px 0px  ;
+    opacity: 25; 
+    margin-left: 50px;
+
+}
+
+header #icons a:hover {
+    color: var(--blue);
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Images/boutique.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 90%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1; /* Position video behind content */
+}
+
+.home .content {
+    color: #fff;
+
+}
+
+.home .content h3 {
+    font-size: 4rem;
+    color: white;
+}
+ 
+.home .content  h6 .btn{
+    color: white; 
+    width: 100px;
+    margin-left: 890px;
+    margin-top: -150px;
+}
+.home .content  h5 .btn{
+        color: white; 
+        margin-left: 890px;
+        width:100px;
+        margin-top: 5px;
+}
+
+.home .content p {
+    font-size: 2rem;
+    color: wheat;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.container .page{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    justify-content: space-evenly;align-items: center;
+    background-color: rgb(246, 234, 213);
+
+}
+
+.container .page img{
+    height: 100%;
+    width: 40%; 
+    border-radius: 100px;
+   
+}
+.container .page h1{    
+   margin-top: -40%;
+   margin-left: 850px;
+   font-size: 50px;
+}
+
+.container .page h2{
+    margin-top: 5%;
+    margin-left: 650px;
+    font-size: 30px;
+ }
+
+ .container .page p{
+    width: 40%;
+    margin-left: 750px;
+    margin-top: 20px;
+    font-size: 20px;
+ }
+
+ .page p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+ }
+
+
+.nithin .page {
+    width: 100%;
+    height: 105vh;
+    background-color: black                                                                                                                                                                                                                     ;
+}
+.nithin .page video{
+    width: 100%;
+    height: 90vh;
+    background: center;
+    z-index: 1;
+    margin-top: 102%;
+
+}
+
+
+
+.siva{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    justify-content: space-around;
+    background-color:rgb(246, 234, 213);
+    
+}
+
+
+.siva .page .box{
+    width: 15%;
+    height: 60vh;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+    margin-top: 90px;
+
+}
+
+
+.siva  .page .box1{
+    background: url(Images/h1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.siva  .page .box2{
+    background: url(Images/h3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.siva  .page .box3{
+    background: url(Images/dhoti.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.siva  .page .box4{
+    background: url(Images/jens.jpg);
+    background-size: cover;
+}
+
+
+.siva  .page .box5{
+    background: url(Images/h2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.siva  .page .box6{
+    background: url(Images/shirt.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.siva .page .box1 h1{
+    margin-top: 180%;
+    margin-left: 20px;
+}
+
+.siva .page .box1 button {
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+    height: 36px;
+    width: 180px;
+    margin: 10px;
+}
+
+
+.siva .page .box2 h1{
+    margin-top: 180%;
+    margin-left: 20px;
+}
+
+
+.siva .page .box2 button {
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+    height: 36px;
+    width: 180px;
+    margin: 10px;
+}
+
+
+.siva .page .box4 h1{
+    margin-top: 180%;
+    margin-left: 20px;
+}
+
+
+.siva .page .box4 button {
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+    height: 36px;
+    width: 180px;
+    margin: 10px;
+}
+
+
+.siva .page .box3 h1{
+    margin-top: 180%;
+    margin-left: 20px;
+}
+
+
+.siva .page .box3 button {
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+    height: 36px;
+    width: 180px;
+    margin: 10px;
+}
+
+
+.siva .page .box5 h1{
+    margin-top: 180%;
+    margin-left: 20px;
+}
+
+
+.siva .page .box5 button {
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+    height: 36px;
+    width: 180px;
+    margin: 10px;
+}
+
+.siva .page .box6 h1{
+    margin-top: 180%;
+    margin-left: 20px;
+    
+}
+
+
+.siva .page .box6 button {
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+    height: 36px;
+    width: 180px;
+    margin: 10px;
+}
+
+
+.n{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    justify-content: space-around;
+    background-color: rgb(246, 234, 213);
+}
+
+.n .page .box{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    float: right;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.n .page .box1{
+    background-color: wheat;
+    background: url(Images/page5.jpeg) no-repeat;
+     background-position: center;
+     border: px solid wheat;
+}
+
+.n .page .box1 h1{
+    width: 100%;
+    height: 100%;
+    margin-top: 35%;
+   margin-left: 5px;
+   background-color: #fff;
+   
+}
+
+.nith .page{
+    width: 0%;
+    height: 0vh;
+    background-position: center;
+}
+
+.nith .page img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
+
+.head-text h2{
+    color: white;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.head-text span{
+    color: var(--pink);
+
+}
+
+.contact-us {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wrapper {
+    width: 400px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px #fff;
+    color: #fff;
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 30px 40px;
+  
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+
+}
+
+.input-box input {
+    width: 80%;
+    height: 50%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: grey ;
+}
+
+
+#btns {
+    width: 70%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px;
+       
+}
+
+#msg {
+    color: black;
+}
+
+#Feed h1 {
+    color: aliceblue;
+    font-size: 70px;
+}
+
+
+
+
+/* styles.css */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.footer-logo p {
+    margin: 5px 0 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer-social a:hover {
+    color: #aaa;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Media Quary for tab*/
+
+/* Tablets (768px and up) */
+@media (max-width: 1024px) {
+    header #icons{
+        display: none;
+    }
+    #brand{
+        display: none;
+    }
+    header .navbar{
+        display: none;
+    }
+    .nithin .page video{
+        margin-top: 212vh;
+    }
+    .container {
+        width: 100%;
+    }
+    .container .page img {
+        width: 100%;
+        height: 50%;
+    }
+    header .navbar a {
+        font-size: 1.6rem;
+    }
+
+    .home .content h3 {
+        font-size: 3rem;
+    }
+
+    .home .content p {
+        font-size: 1.8rem;
+    }
+
+    .container .page h1 {
+        margin-top: 0vh;
+        margin-left: 4px;
+    }
+
+    .container .page h2 {
+        margin-top: 0vh;
+        margin-left: 4px;
+    }
+
+    .container .page p {
+        margin-top: 0vh;
+        margin-left: 4px;
+        width: 40vh;
+    }
+
+    .siva .page .box1 {
+        width: 40%;
+        height: 30vh;
+    }
+    .siva .page .box1 h1{
+        margin-top: 25vh;
+        margin-left: 5vh;
+    }
+    .siva .page .box2 {
+        width: 40%;
+        height: 30vh;
+    }
+    .siva .page .box2 h1{
+        margin-top: 25vh;
+        margin-left: 5vh;
+    }
+    .siva .page .box3 {
+        width: 40%;
+        height: 30vh;
+    }
+    .siva .page .box3 h1{
+        margin-top: 25vh;
+        margin-left: 5vh;
+    }
+    .siva .page .box4 {
+        width: 40%;
+        height: 30vh;
+    }
+    .siva .page .box4 h1{
+        margin-top: 25vh;
+        margin-left: 5vh;
+    }
+    .siva .page .box5 {
+        width: 40%;
+        height: 30vh;
+    }
+    .siva .page .box5 h1{
+        margin-top: 25vh;
+        margin-left: 5vh;
+    }
+    .siva .page .box6 {
+        width: 40%;
+        height: 30vh;
+    }
+    .siva .page .box6 h1{
+        margin-top: 25vh;
+        margin-left: 5vh;
+    }
+    
+
+}
+
+
+/* Mobile Phones (768px and below) */
+@media (max-width: 768px) {
+    .container{
+        width: 100%;
+    }
+    .container.page1 {
+        width: 39%;
+    }
+
+    .page1 header nav  {
+        display:none;
+    }
+    .page1 .contant{
+        display: contents;
+    }
+    .page1 .contant h1{
+        margin-left: 3vh;
+    }
+    .page1 .contant h2{
+        margin-left: 3vh;
+    }
+    button{
+         margin-left: 3vh;
+    }
+
+    header .navbar a {
+        display: block;
+        margin: 5px 0;
+        font-size: 1.5rem;
+    }
+
+    header #icons {
+        margin-top: 10px;
+    }
+    
+    .home {
+        background-position: center;
+    }
+
+    .home .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+    .container .page img {
+        width: 100%;
+    }
+
+    .n .page .box1 h1 {
+        font-size: 1.5rem;
+    }
+    .footer-containe{
+        position: fixed;
+        margin-left: -20vh;
+    }
+
+    .footer{
+        width: 100%;
+        margin-top: 20%;
+    }
+    .footer-bottom{
+        margin-bottom: 0%;
+    }
+}
+
+/* Extra Small Devices (480px and below) */
+@media (max-width: 480px) {
+    header .navbar a {
+        font-size: 1.3rem;
+    }
+
+    .home .content h3 {
+        font-size: 2rem;
+    }
+
+}
+
+#price{
+    color: black;
+    text-align: center;
+    background: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.cart {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+}
+
+.cart h2 {
+    margin: 0 0 10px;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart li {
+    margin-bottom: 10px;
+}
+
+.quantity-btn {
+    margin: 0 5px;
+}
+
+.remove-item {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    opacity: 0.7;
+}
+
+.signup {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.signup h2 {
+    margin-bottom: 20px;
+}
+
+.signup label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.signup input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.signup button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.signup button:hover {
+    background: #0056b3;
+}
+
+
+
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+ 
+    <div class="siva">
+        <div class="page" id="page3">
+            <!-- Product boxes -->
+            <div class="box-box1">
+                <img id="nan" src="Images/h1.jpg" alt="Formal Wear">
+                <button class="price-btn" data-id="1" data-name="Formal" data-price="4999" data-image="Images/formal.jpg"><h3>Add to cart</h3></button>
+            </div>
+            <div class="box-box2">
+                <img  id="nan" src="Images/h3.jpg" alt="Casual Wear">
+                <button class="price-btn" data-id="2" data-name="Casual" data-price="399" data-image="Images/casual.jpg"><h3>Add to cart</h3></button>
+            </div>
+            <div class="box-box3">
+                <img  id="nan" src="Images/dhoti.jpg" alt="Dhoti Wear">
+                <button class="price-btn" data-id="3" data-name="Dhoti" data-price="499" data-image="Images/dhoti.jpg"><h3>Add to cart</h3></button>
+            </div>
+            <div class="box-box4">
+                <img  id="nan" src="Images/jens.jpg" alt="Jeans Wear">
+                <button class="price-btn" data-id="4" data-name="Jeans" data-price="799" data-image="Images/jeans.jpg"><h3>Add to cart</h3></button>
+            </div>
+            <div class="box-box5">
+                <img  id="nan" src="Images/h2.jpg" alt="T-shirt Wear">
+                <button class="price-btn" data-id="5" data-name="T-Shirt" data-price="299" data-image="Images/tshirt.jpg"><h3>Add to cart</h3></button>
+            </div>
+            <div class="box-box6">
+                <img  id="nan" src="Images/shirt.jpg" alt="Shirt Wear">
+                <button class="price-btn" data-id="6" data-name="Shirt" data-price="499" data-image="Images/shirt.jpg"><h3>Add to cart</h3></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart section -->
+<div class="shopping-cart" id="shopping-cart">
+    <h2>Your Shopping Cart</h2>
+    
+    <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <div id="exit">
+        <button id="checkout-btn" class="btn">Checkout</button>
+        <a href="index.html" > <i class='bx bx-exit' ></i></a>
+        </div>
+   
+</div>
+
+</body>
+
+<script>
+    // Initialize the cart as an empty array
+    let cart = [];
+
+    // Function to update the cart display
+    function updateCart() {
+        const cartItemsElement = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+        
+        cartItemsElement.innerHTML = ''; // Clear the current cart items display
+        let total = 0;
+
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                ${item.name} - $${item.price}
+                <div class="quantity-controls">
+                    <button class="decrease-btn" data-id="${item.id}">-</button>
+                    <span>${item.quantity}</span>
+                    <button class="increase-btn" data-id="${item.id}">+</button>
+                </div>
+            `;
+
+            cartItemsElement.appendChild(listItem);
+            total += item.price * item.quantity;
+        });
+
+        cartTotalElement.textContent = total.toFixed(2);
+
+        // Add event listeners for plus/minus buttons
+        const increaseButtons = document.querySelectorAll('.increase-btn');
+        const decreaseButtons = document.querySelectorAll('.decrease-btn');
+
+        increaseButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                increaseQuantity(id);
+            });
+        });
+
+        decreaseButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                decreaseQuantity(id);
+            });
+        });
+    }
+
+    // Function to add an item to the cart
+    function addToCart(id, name, price, image) {
+        const existingItem = cart.find(item => item.id === id);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({ id, name, price: parseFloat(price), image, quantity: 1 });
+        }
+
+        updateCart();
+    }
+
+    // Function to increase the quantity of an item
+    function increaseQuantity(id) {
+        const item = cart.find(product => product.id == id);
+        if (item) {
+            item.quantity += 1;
+            updateCart();
+        }
+    }
+
+    // Function to decrease the quantity of an item
+    function decreaseQuantity(id) {
+        const item = cart.find(product => product.id == id);
+        if (item && item.quantity > 1) {
+            item.quantity -= 1;
+        } else {
+            cart = cart.filter(product => product.id != id); // Remove item from cart
+        }
+        updateCart();
+    }
+
+    // Add event listeners to the product buttons
+    const priceButtons = document.querySelectorAll('.price-btn');
+    priceButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.getAttribute('data-id');
+            const productName = this.getAttribute('data-name');
+            const productPrice = this.getAttribute('data-price');
+            const productImage = this.getAttribute('data-image');
+
+            addToCart(productId, productName, productPrice, productImage);
+        });
+    });
+</script>
+
+
+</html>
